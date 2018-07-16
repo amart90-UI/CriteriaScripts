@@ -6,7 +6,7 @@ fire.proj <- spTransform(fire.perim, projection(age))
 ui.proj <- spTransform(ui, projection(age))
 
 # Clip to fire extent
-age <- crop(age, extent( fire.proj))
+age <- crop(age, extent(fire.proj))
 
 # Mask stand age to UIs
 age.ui <- mask(age, ui.proj)
